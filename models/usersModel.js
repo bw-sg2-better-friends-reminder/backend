@@ -29,4 +29,9 @@ const update = (id, data) => {
     return getById(id).update(data);
 };
 
+const getByEmail = (email) => {
+    const filteredByEmail = filterByField('email', email);
+    return filteredByEmail(baseQuery());
+};
+
 export { getAll, getById, insert, remove, update };
